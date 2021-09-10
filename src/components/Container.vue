@@ -1,17 +1,27 @@
 <template>
   <div class="container">
       <!-- <GChartView /> -->
+      <AnalysisChart 
+        :data="data"
+        :color="color"
+        :legend="legend"
+        :backdrop="backdrop"
+        :empty="empty"
+        :yAxis="yAxis"
+      />
       <InputData />
   </div>
 </template>
 
 <script>
 import InputData from './InputData.vue'
+import AnalysisChart from './AnalysisChart.vue'
 // import GChartView from '../views/GChartView.vue'
 
 export default {
     components: {
         InputData,
+        AnalysisChart,
         // GChartView
     }
 }
